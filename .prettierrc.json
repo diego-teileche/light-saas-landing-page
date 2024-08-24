@@ -3,5 +3,5 @@
   "plugins": ["prettier-plugin-tailwindcss"],
   "tailwindConfig": "./tailwind.config.ts",
   "tailwindAttributes": ["className"],
-  "tailwindFunctions": ["clsx"]
+  "tailwindFunctions": ["clsx", "tw"]
 }
