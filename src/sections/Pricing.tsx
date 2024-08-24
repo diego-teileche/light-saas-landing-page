@@ -59,6 +59,35 @@ export const Pricing = () => {
           Free forever. Upgrade for unlimited tasks, better security, and
           exclusive features
         </p>
+
+        <div>
+          {pricingTiers.map(
+            ({
+              title,
+              monthlyPrice,
+              buttonText,
+              popular,
+              inverse,
+              features,
+            }) => (
+              <div key={title}>
+                <h3>{title}</h3>
+                <div>
+                  <span>${monthlyPrice}</span>
+                  <span>/month</span>
+                </div>
+                <button>{buttonText}</button>
+                <ul>
+                  {features.map((feature, index) => (
+                    <li key={index}>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ),
+          )}
+        </div>
       </div>
     </section>
   )
