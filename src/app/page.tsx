@@ -1,5 +1,6 @@
 "use client"
 import { useTitleChanger } from "@/hooks/useTitleChanger"
+import { Header } from "@/sections/Header"
 
 export default function Home() {
   useTitleChanger({
@@ -7,5 +8,5 @@ export default function Home() {
     blurTitle: "I miss you! 😭 | Diego Tech",
   })
 
-  return <h1>Diego Tech</h1>
+  return <Header />
 }
