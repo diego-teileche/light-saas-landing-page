@@ -32,9 +32,7 @@ export const Header = () => {
               <a href="#">Customers</a>
               <a href="#">Updates</a>
               <a href="#">Help</a>
-              <button className="inline-flex items-center justify-center rounded-lg bg-black px-4 py-2 font-medium tracking-tight text-white">
-                Get for free
-              </button>
+              <button className="btn btn-primary">Get for free</button>
             </nav>
           </div>
         </div>
