@@ -1,3 +1,3 @@
 export const Hero = () => {
-  return null;
-};
+  return <section>Diego</section>
+}

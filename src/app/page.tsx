@@ -1,6 +1,7 @@
 "use client"
 import { useTitleChanger } from "@/hooks/useTitleChanger"
 import { Header } from "@/sections/Header"
+import { Hero } from "@/sections/Hero"
 
 export default function Home() {
   useTitleChanger({
@@ -8,5 +9,10 @@ export default function Home() {
     blurTitle: "I miss you! 😭 | Diego Tech",
   })
 
-  return <Header />
+  return (
+    <>
+      <Header />
+      <Hero />
+    </>
+  )
 }
