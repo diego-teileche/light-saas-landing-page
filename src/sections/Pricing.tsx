@@ -57,13 +57,15 @@ export const Pricing = () => {
   return (
     <section className="py-24">
       <div className="container">
-        <h2 className="section-title">Pricing</h2>
-        <p className="section-description mt-5">
-          Free forever. Upgrade for unlimited tasks, better security, and
-          exclusive features
-        </p>
+        <div className="section-heading">
+          <h2 className="section-title">Pricing</h2>
+          <p className="section-description mt-5">
+            Free forever. Upgrade for unlimited tasks, better security, and
+            exclusive features
+          </p>
+        </div>
 
-        <div>
+        <div className="mt-10 flex flex-col items-center gap-6 lg:flex-row lg:items-end lg:justify-center">
           {pricingTiers.map(
             ({
               title,
@@ -76,12 +78,19 @@ export const Pricing = () => {
               <div
                 key={title}
                 className={twMerge(
-                  "rounded-3xl border border-[#f1f1f1] p-10 shadow-[0px_7px_14px_#eaeaea]",
-                  inverse === true && "border-black bg-black text-white/60",
+                  "w-full max-w-xs rounded-3xl border border-[#f1f1f1] p-10 shadow-[0px_7px_14px_#eaeaea]",
+                  inverse === true && "border-black bg-black text-white",
                 )}
               >
                 <div className="flex justify-between">
-                  <h3 className="text-lg font-bold text-black/50">{title}</h3>
+                  <h3
+                    className={twMerge(
+                      "text-lg font-bold text-black/50",
+                      inverse === true && "text-white/60",
+                    )}
+                  >
+                    {title}
+                  </h3>
                   {popular && (
                     <div className="inline-flex rounded-xl border border-white/20 px-4 py-1.5 text-sm">
                       <span className="bg-[linear-gradient(to_right,#dd7ddf,#e1cd86,#bbcb92,#71c2ef,#3bffff,#dd7ddf)] bg-clip-text font-medium text-transparent">
@@ -98,7 +107,12 @@ export const Pricing = () => {
                     /month
                   </span>
                 </div>
-                <button className="btn btn-primary mt-[30px] w-full">
+                <button
+                  className={twMerge(
+                    "btn btn-primary mt-[30px] w-full",
+                    inverse === true && "bg-white text-black",
+                  )}
+                >
                   {buttonText}
                 </button>
                 <ul className="mt-8 flex flex-col gap-5">
