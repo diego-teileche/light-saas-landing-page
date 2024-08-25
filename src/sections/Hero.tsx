@@ -1,8 +1,10 @@
+"use client"
 import ArrowIcon from "@/assets/arrow-right.svg"
 import cogImage from "@/assets/cog.png"
 import cylinderImage from "@/assets/cylinder.png"
 import noddleImage from "@/assets/noodle.png"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 export const Hero = () => {
   return (
@@ -28,8 +30,17 @@ export const Hero = () => {
           </div>
 
           <div className="relative mt-20 md:mt-0 md:h-[648px] md:flex-1">
-            <Image
-              src={cogImage}
+            <motion.img
+              src={cogImage.src}
+              animate={{
+                translateY: [-30, 30],
+              }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "mirror",
+                duration: 3,
+                ease: "easeInOut",
+              }}
               className="md:absolute md:-left-6 md:h-full md:w-auto md:max-w-none lg:left-0"
               alt="Cog Image"
             />
