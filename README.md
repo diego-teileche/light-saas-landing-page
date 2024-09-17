@@ -1,6 +1,6 @@
 # About the Landing Page <img src="./src/assets/logosaas.png" width="40px" height="40px" align="center" alt="SaaS Landing Page Logo | Diego Tech" />
 
-This is a SaaS Landing Page Light Mode built by `Diego Tech` by using:
+This is a modern [Light Mode SaaS Landing Page](https://ff045025.light-saas-landing-page.pages.dev/) built by `Diego Tech` by using:
 
 - Next.js
 - TypeScript
