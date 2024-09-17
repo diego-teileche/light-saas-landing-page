@@ -9,6 +9,8 @@ import { Pricing } from "@/sections/Pricing"
 import { ProductShowcase } from "@/sections/ProductShowcase"
 import { Testimonials } from "@/sections/Testimonials"
 
+export const runtime = "edge"
+
 export default function Home() {
   useTitleChanger({
     defaultTitle: "Light Saas Landing Page | Diego Tech",
